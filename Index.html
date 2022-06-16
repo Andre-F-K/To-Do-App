@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To Do App</title>
+    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div id="headerAndButtonWrapper">
+        <h1 id="taskHeader">Your Organizing Buddy!!</h1>
+        <button id="sortTasks">Sort Your Tasks Adiabatically</button>
+    </div>
+    <div id="addTaskWrapper">
+        <form id="userInputForm">
+            <label for="newTaskInput">Insert New Task</label>
+            <input type="text" id="newTaskInput" name="newTaskInput">
+            <Label for="dueDateInput">Due Date</Label>
+            <input type="date" id="dueDateInput" name="dueDateInput">
+            <button id="newTaskSubmitButton" type="submit">Add Task</button>
+            <div id="error"></div>
+        </form>
+    </div>
+    </header>
+    <div id="appBody">
+    <section id="displayTaskSection">
+        <form id="taskForm">
+            
+        </form>
+    </section>
+    </div>
+</body>
+</html>
