@@ -19,17 +19,17 @@ const userInputForm = document.getElementById('userInputForm');
     }
 
     const taskElement = document.createElement('div');
-    taskElement.classList.add('task')
+    taskElement.classList.add('task');
 
-    const taskContentElem = document.createElement('div')
-    taskContentElem.classList.add('content')
+    const taskContentElem = document.createElement('div');
+    taskContentElem.classList.add('content');
 
-    taskElement.appendChild(taskContentElem)
+    taskElement.appendChild(taskContentElem);
 
-    const taskInputEle = document.createElement('input')
-    taskInputEle.classList.add('text')
-    taskInputEle.type = 'text'
-    taskInputEle.value = newTask
+    const taskInputEle = document.createElement('input');
+    taskInputEle.classList.add('text');
+    taskInputEle.type = 'text';
+    taskInputEle.value = newTask;
     taskInputEle.setAttribute('readonly' , 'readonly')
 
     const taskDateEle = document.createElement('input')
@@ -80,18 +80,16 @@ const userInputForm = document.getElementById('userInputForm');
 
 
 
-    // class TasksObj{
-    //     constructor (task, dueDate){
-    //         this.task = task
-    //         this.dueDate = dueDate
-    //     }
-    // }
-    array.forEach(taskInputEle => {
-        const myTask = new TasksObj(taskDateEle.value, taskInputEle.value)
-    });
-    // const myTask = new TasksObj(taskDateEle.value, taskInputEle.value)
+    class TasksObj{
+        constructor (task, dueDate){
+            this.task = task
+            this.dueDate = dueDate
+        }
+    }
+
+    const myTask = new TasksObj(taskDateEle.value, taskInputEle.value)
      
-    
+    console.log(myTask)
     
    localStorage.setItem('Tasks', JSON.stringify(myTask))
 })
