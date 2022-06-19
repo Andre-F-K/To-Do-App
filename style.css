@@ -28,3 +28,18 @@ header{
     margin-bottom: 1rem;
     font-weight: bold;
 }
+
+.content {
+    ds;
+}
+
+.task {
+    background-color: rgb(38, 43, 43);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.1rem ;
+    border: 0.5px;
+    border-style: dashed;
+    border-color: antiquewhite;
+
+}
