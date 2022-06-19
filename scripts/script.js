@@ -78,15 +78,21 @@ const userInputForm = document.getElementById('userInputForm');
      listElement.removeChild(taskElement)   
     })
 
-    class TasksObj{
-        constructor (task, dueDate){
-            this.task = task
-            this.dueDate = dueDate
-        }
-    }
+
+
+    // class TasksObj{
+    //     constructor (task, dueDate){
+    //         this.task = task
+    //         this.dueDate = dueDate
+    //     }
+    // }
+    array.forEach(taskInputEle => {
+        const myTask = new TasksObj(taskDateEle.value, taskInputEle.value)
+    });
+    // const myTask = new TasksObj(taskDateEle.value, taskInputEle.value)
+     
     
-    const myTask = new TasksObj(newTask, dueDate)
     
-    console.log(myTask)
+   localStorage.setItem('Tasks', JSON.stringify(myTask))
 })
 
