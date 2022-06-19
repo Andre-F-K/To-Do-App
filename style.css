@@ -1,48 +1,30 @@
 *{
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
-#headerAndButtonWrapper{
+body{
     display: flex;
-    justify-content: space-between ;
-    padding: 5px;
-}
-
-#addTaskWrapper{
-    text-align: center;
-    padding-bottom: 5px;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: darkslategray;
+    color: antiquewhite;
 }
 
 header{
-    background-color: darkgray;
-}
-
-#appBody{
-    height: 88.4vh;
+    padding: 2rem 1rem;
+    max-width: 800px;
     width: 100%;
-    background-color: black;
-    padding-left: 10%;
-    padding-top: 2%;
-}
-#displayTaskSection{
-    background-color: rgb(47, 48, 47);   
-    height: 80vh;
-    width: 90%;
-    border-radius: 10px;
-    
-
 }
 
-#taskForm{
-    background-color: red;
-    width: 100%;
-    height: 5%;
-    padding-top: 2%;  
-    padding-left: 1vh;
-    display: flex;
-    flex-direction: column;
-
+.headerAndButtonWrapper{
+    display: block;
+    flex-direction: row;
 }
 
+.taskHeader{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
