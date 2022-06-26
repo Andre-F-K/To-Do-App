@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My To Do App</title>
-    <script src="scripts/script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>My To Do List</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="style.css" />
+	<!-- End of CSS Import -->
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
 </head>
 <body>
-    <header>
-    <div id="headerAndButtonWrapper">
-        <h1 id="taskHeader">Your Organizing Buddy!!</h1>
-        <button id="sortTasks">Sort Your Tasks Adiabatically</button>
-    </div>
-    <div id="addTaskWrapper">
-        <form id="userInputForm">
-            <label for="newTaskInput">Insert New Task</label>
-            <input type="text" id="newTaskInput" name="newTaskInput">
-            <Label for="dueDateInput">Due Date</Label>
-            <input type="date" id="dueDateInput" name="dueDateInput">
-            <button id="newTaskSubmitButton" type="submit">Add Task</button>
-            <div id="error"></div>
-        </form>
-    </div>
-    </header>
-    <div></div>
-    <main>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				Are you ready to start working <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3 id="addTaskHeaders" class="createTaskHeader">Create your Task</h3>
+			<form id="new-todo-form">
+				<h4 id="addTaskHeaders">One small task for man one giant growth for mankind...</h4>
+				<input 
+					type="text"
+                    placeholder="Your task goes here" 
+					name="content"
+					id="content" />
+				
+				<h4 id="addTaskHeaders">Choose a Priority</h4>
+				<div class="options">
+					<label class="optionButton">
+						<input type="radio" name="category" id="category1" value="business" /> 
+						<span class="bubble business"></span>
+						<div>Procrastination-able</div>
+					</label>
+					<label class="optionButton">
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>ASAP Task</div>
+					</label>
+				</div>
 
-        <section id="taskList">
-            <div id="tasks">
-                <!-- dummy task for reference -->
-                <!-- <div class="task">
-                    <div class="content">
-                        <input type="text" class="text" value="newTask" readonly>
-                        <input type="date" class="text" value="date" readonly>
-                    </div>
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </div>
-                </div> -->
+				<input type="submit" value="Add todo" id="formSubmit" onclick="formValidate()"/>
+			</form>
+		</section>
+		<!-- End of New Todo -->
 
-            </div>
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3 id="addTaskHeaders">Your task list</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
 
-        </section>
+	</main>
+	<!-- End of App Wrapper -->
 
-
-    </main>
+	<!-- JS Import -->
+	<script src="scripts/script.js" defer></script>
+	<!-- End of JS Import -->
 </body>
 </html>
